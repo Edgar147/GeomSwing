@@ -30,8 +30,8 @@ public class HelloSwing extends JFrame{
             HelloSwing h= new HelloSwing();
             h.setContentPane(h.panelMain);
             h.setTitle("My windows");
-            h.setBounds(600,200,200,200);
-            h.setSize(500,540);
+            h.setBounds(0,0,1500,600);
+            h.setSize(1500,600);
             h.setVisible(true);
             h.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
     }
