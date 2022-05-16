@@ -40,7 +40,7 @@ public class MainMenu extends JFrame {
         MainMenu mm=new MainMenu();
         mm.setContentPane(mm.mainPanel);
         mm.setTitle("Main Menu");
-        mm.setSize(600,600);
+        mm.setSize(1400,800);
 //        mm.secondPanel2.setVisible(false);
 
         mm.setVisible(true);
