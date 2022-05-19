@@ -16,7 +16,7 @@ public class MainMenu extends JFrame {
             public void actionPerformed(ActionEvent e) {
                 TriangleView tv= new TriangleView();
 //                tv.setContentPane(tv.getTrianglePanel());
-//                tv.setTitle("Triangle");
+//                tv.setTitle("triangle.Triangle");
                 tv.setSize(600,600);
 
                 tv.setVisible(true);
@@ -30,6 +30,19 @@ public class MainMenu extends JFrame {
 //                setContentPane(secondPanel2);
 //                secondPanel2.setVisible(true);
 
+
+
+            }
+        });
+        rectangleButton.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                RectangleView rv=new RectangleView();
+                rv.setVisible(true);
+                mainPanel.setVisible(false);
+
+                rv.setSize(800,800);
+                setContentPane(rv.getRectPanel());
 
 
             }
