@@ -66,4 +66,22 @@ public class Triangle implements Shape {
     public float perimeter(ArrayList<Integer> sides) {
         return 0;
     }
+
+    @Override
+    public String getName(){
+        return "This is a Triangle";
+    }
+
+
+    public void setPoints(ArrayList<Float> L){
+        setA(L.get(0));
+        setB(L.get(1));
+        setC(L.get(2));
+    }
+
+    @Override
+    public boolean getInfoOfZone(String nameZone){
+        return nameZone=="forTriangle";
+    }
+
 }
