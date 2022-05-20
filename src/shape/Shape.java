@@ -12,9 +12,9 @@ public interface Shape {
      float getSurface();
     float perimeter(ArrayList<Integer> sides);
 
-    static String getName(String name) {
-        return "This is a "+name;
-    }
+    String getName();
+
+    boolean getInfoOfZone(String nameZone);
 
 
 }

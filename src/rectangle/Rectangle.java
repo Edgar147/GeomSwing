@@ -25,4 +25,13 @@ public class Rectangle extends Polygon {
     public int getNbSides(){
         return  4;
     }
+    @Override
+    public String getName(){
+        return "This is a Rectangle";
+    }
+
+    @Override
+    public boolean getInfoOfZone(String nameZone){
+        return nameZone=="forRectangle";
+    }
 }

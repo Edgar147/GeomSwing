@@ -1,3 +1,7 @@
+import rectangle.Rectangle;
+import shape.Shape;
+import triangle.Triangle;
+
 import javax.swing.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
@@ -14,22 +18,21 @@ public class MainMenu extends JFrame {
         trianglesButton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                TriangleView tv= new TriangleView();
-//                tv.setContentPane(tv.getTrianglePanel());
-//                tv.setTitle("triangle.Triangle");
-                tv.setSize(600,600);
-
-                tv.setVisible(true);
-                mainPanel.setVisible(false);
-                setContentPane(tv.getTrianglePanel());
-//                tv.getDrawZone().setVisible(false);
+//                TriangleView tv= new TriangleView();
+//
+//                tv.setSize(600,600);
+//
+//                tv.setVisible(true);
 //                mainPanel.setVisible(false);
-//                tv.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+//                setContentPane(tv.getTrianglePanel());
+                DrawShapes shapes=new DrawShapes();
+                Shape triangle=new Triangle();
+                shapes.setForm(triangle);
+                shapes.setMainJPanelVisible();
+                mainPanel.setVisible(false);
 
-//              mainPanel.setVisible(false);
-//                setContentPane(secondPanel2);
-//                secondPanel2.setVisible(true);
-
+                shapes.setSizeJPanel(800,800);
+                setContentPane(shapes.getMainJPanel());
 
 
             }
@@ -37,12 +40,11 @@ public class MainMenu extends JFrame {
         rectangleButton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                RectangleView rv=new RectangleView();
-                rv.setVisible(true);
-                mainPanel.setVisible(false);
 
-                rv.setSize(800,800);
-                setContentPane(rv.getRectPanel());
+                Shape rectangle=new Rectangle();
+                DrawShapes shapes=new DrawShapes(rectangle);
+                mainPanel.setVisible(false);
+                setContentPane(shapes.getMainJPanel());
 
 
             }
