@@ -25,8 +25,8 @@ public class MainMenu extends JFrame {
 //                tv.setVisible(true);
 //                mainPanel.setVisible(false);
 //                setContentPane(tv.getTrianglePanel());
-                DrawShapes shapes=new DrawShapes();
                 Shape triangle=new Triangle();
+                DrawShapes shapes=new DrawShapes(triangle);
                 shapes.setForm(triangle);
                 shapes.setMainJPanelVisible();
                 mainPanel.setVisible(false);
